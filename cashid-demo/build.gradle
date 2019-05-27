@@ -1,0 +1,33 @@
+plugins {
+	id 'org.springframework.boot' version '2.1.4.RELEASE'
+	id 'java'
+}
+
+apply plugin: 'io.spring.dependency-management'
+
+group = 'io.lazyfox'
+version = '0.0.1-SNAPSHOT'
+sourceCompatibility = '1.8'
+
+repositories {
+	mavenCentral()
+}
+
+dependencies {
+	implementation 'org.springframework.boot:spring-boot-starter'
+	implementation 'org.springframework.boot:spring-boot-starter-web'
+	implementation 'org.springframework.boot:spring-boot-starter-freemarker'
+	implementation 'org.springframework.boot:spring-boot-starter-data-jpa'
+
+	implementation 'com.h2database:h2'
+	implementation 'commons-io:commons-io:2.5'
+	implementation 'org.apache.commons:commons-lang3:3.5'
+	implementation 'org.apache.commons:commons-collections4:4.1'
+	implementation 'org.bitcoinj:bitcoinj-core:0.14.3'
+	implementation 'org.bouncycastle:bcprov-jdk15on:1.56'
+	implementation 'com.fasterxml.jackson.core:jackson-databind:2.9.9'
+	implementation 'commons-validator:commons-validator:1.5.1'
+	implementation 'org.apache.httpcomponents:httpclient:4.5.3'
+		
+	testImplementation 'org.springframework.boot:spring-boot-starter-test'
+}
